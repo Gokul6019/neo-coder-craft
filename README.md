@@ -1,5 +1,7 @@
 # Gokul Raj V — Futuristic Developer Portfolio
 
+🔗 **Live Website:** https://neo-coder-craft.lovable.app
+
 > Aspiring Software Engineer & AI/ML Developer
 
 A high-end, futuristic developer portfolio for **Gokul Raj V** — a 1st-year B.Tech CSE (AI & ML) student at NIAT × SVYASA University, Bengaluru. Built as a coding command center with a dark neon aesthetic, glassmorphism cards, terminal-style hero, animated grid/particles, and a mouse-following glow.
