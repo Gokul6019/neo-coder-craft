@@ -125,7 +125,7 @@ export function Hero() {
               ))}
               {step < lines.length ? (
                 <p className="text-foreground">
-                  <span className="text-primary">{lines[step].prompt} </span>
+                  <span className="text-primary">{lines[step]?.prompt} </span>
                   {typed}
                   <span className="caret-blink text-primary">▊</span>
                 </p>
