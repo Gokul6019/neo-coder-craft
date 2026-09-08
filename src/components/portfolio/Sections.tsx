@@ -327,7 +327,8 @@ export function GitHubSection() {
 }
 
 export function Contact() {
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  type FieldErrors = { name?: string; email?: string; message?: string };
+  const [errors, setErrors] = useState<FieldErrors>({});
   const [sent, setSent] = useState(false);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -336,7 +337,7 @@ export function Contact() {
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
-    const next: Record<string, string> = {};
+    const next: FieldErrors = {};
     if (name.length < 2) next.name = "Please enter your name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Please enter a valid email.";
     if (message.length < 10) next.message = "Message should be at least 10 characters.";

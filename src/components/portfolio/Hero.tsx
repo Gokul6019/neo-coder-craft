@@ -24,6 +24,7 @@ function useTypedScript() {
     }
     if (step >= lines.length) return;
     const line = lines[step];
+    if (!line) return;
     const text = line.cmd ?? line.out ?? "";
     if (line.out) {
       const t = setTimeout(() => setStep((s) => s + 1), 380);
