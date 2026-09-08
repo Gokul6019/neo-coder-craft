@@ -24,6 +24,7 @@ function useTypedScript() {
     }
     if (step >= lines.length) return;
     const line = lines[step];
+    if (!line) return;
     const text = line.cmd ?? line.out ?? "";
     if (line.out) {
       const t = setTimeout(() => setStep((s) => s + 1), 380);
@@ -124,7 +125,7 @@ export function Hero() {
               ))}
               {step < lines.length ? (
                 <p className="text-foreground">
-                  <span className="text-primary">{lines[step].prompt} </span>
+                  <span className="text-primary">{lines[step]?.prompt} </span>
                   {typed}
                   <span className="caret-blink text-primary">▊</span>
                 </p>

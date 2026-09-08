@@ -23,6 +23,7 @@ export function Backdrop() {
         cancelAnimationFrame(raf);
       };
     }
+    return undefined;
   }, []);
 
   useEffect(() => {
